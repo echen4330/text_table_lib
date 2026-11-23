@@ -1,0 +1,14 @@
+[project]
+name = "text-table-lib"
+version = "0.1.0"
+description = "Creates text tables with correct column widths for CJK and emoji."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
