@@ -53,3 +53,10 @@ of the cells they contain.
 - `render(headers, rows=(), aligns=None)` — convenience wrapper around `Table`.
 - `display_width(text)` — number of terminal columns `text` occupies.
 - `pad(text, width, align="left")` — pad `text` to `width` columns.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
